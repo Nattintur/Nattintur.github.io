@@ -1,0 +1,97 @@
+/*  Футер   */
+.page-footer{
+    background: @white-color;
+    position: relative;
+    text-align: center;
+    &__wrap{
+        padding: 35px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link-hashtag{
+        font-size: 21px;
+        line-height: 26px;
+        color: @color-link;
+        &:hover{
+            color: rgba(129,179,210,1);
+            transition: @transition-hover;
+        }
+        &:active{
+            color: rgba(178,178,178,1);
+        }
+    }
+    &__dev{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__link-copyright{
+            display: inline-block;
+            vertical-align: middle;
+        &:hover{
+            fill: rgba(129,179,210,1);
+            transition: @transition-hover;
+        }
+        &:active{
+            fill: rgba(178,178,178,1);
+        }
+    }
+    &__svg-copyright{
+        width: 27px;
+        height: 35px;
+    }
+}
+.social-links{
+    padding: 38px 0;
+    &__item{
+        width: 48px;
+        height: 47px;
+        display: inline-block;
+        vertical-align: top;
+        background: @blue-color;
+        fill: @white-color;
+        svg{
+            height: 45px;
+        }
+        &:hover{
+            background: rgba(102,158,192,1);
+            fill: @white-color;
+            transition: @transition-hover;
+        }
+        &:active{
+            background: rgba(84,150,189,1);
+            fill: rgba(136,182,209,1);
+        }
+    }  
+}
+
+@media (min-width:@width-tablet-content){
+    .page-footer{
+        &__wrap{
+            padding: 33px 38px 35px;
+            flex-direction: row;
+        }
+        &__item{
+            width: 33%;
+            &--right{
+                text-align: right;
+            }
+        }
+        &__dev{
+            margin: 0;
+        }
+    }
+    .social-links{
+        padding: 0px;
+        width: 33%;
+    }
+}
+
+@media (min-width:@width-desktop-content){
+    page-footer{
+        &__wrap{
+            padding: 33px 45px 35px;
+        }
+    }
+}

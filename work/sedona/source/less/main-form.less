@@ -1,0 +1,574 @@
+.card{
+    &__main-logo-form{
+        fill: @white-color;
+        width:174px;
+        height:30px;
+        margin-bottom: 65px;
+        margin-top: 27px;
+    }
+}
+.main-page-header{
+    border-bottom: 1px solid @color-border;
+    &__wrap{
+        padding: 0 6.25%;
+        text-align: center;
+    }
+    &__title{
+        margin-top: 73px;
+        }
+    &__descr{
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+}
+.form-review{
+    &__title{
+        text-align: center;
+        margin-top: 18px;
+        margin-bottom: 26px;
+        h2{
+            .font-title();
+        }   
+    }
+}
+.person-data{
+    border-bottom: 1px solid @color-border;
+    &__wrap{
+        padding: 0 6.25%;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        .font-text();
+        margin-left: 20px;   
+        &:not([for^="patronymic"])::after{
+        content: '*';
+        color: red;
+        } 
+    }
+    input[type="text"]{
+        display: block;
+        width: 86%;
+        height: 22px;
+        padding: 18px 7.2%;
+        margin-bottom: 16px;
+        margin-top: 5px;
+        .font-title();
+    }
+}
+.impression{
+    border-bottom: 1px solid @color-border;
+    &__wrap{
+        padding: 0 6.25%;
+        text-align: center;
+    }
+    &__title{
+        margin-bottom: 25px;
+        margin-top: 17px;
+    }
+    &__list{
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;  
+    }
+    &__item{
+        text-align: left;
+        margin-bottom: 10px;
+        &:last-of-type{
+            margin-bottom: 0px;
+        }
+    }
+    input[type="radio"]{
+        display: none;
+    }
+    label{
+        .font-title();
+        text-transform: initial;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer; 
+        &::before{
+            display: inline-block;
+            content: '';
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+            cursor: pointer;   
+            border: 18px solid #f2f2f2;
+            border-radius: 50%;    
+            background: #f2f2f2;
+            vertical-align: middle; 
+        }
+        &:hover:before{
+            border: 18px solid rgba(229,229,229,1);
+            background: rgba(229,229,229,1);
+            transition: @transition-hover;
+        }
+        &:active:before{
+            border: 18px solid rgba(213,213,213,1);
+            background: rgba(213,213,213,1);
+        }
+    }  
+    
+    #radio-1:checked ~ label[for="radio-1"]::before{
+        background: rgba(51,51,51,1);
+        vertical-align: middle;
+    }
+    #radio-1:checked ~ label[for="radio-1"]:hover:before{
+                border: 18px solid rgba(229,229,229,1);
+                background: rgba(51,51,51,1);
+                transition: @transition-hover;
+    }
+    #radio-1:checked ~ label[for="radio-1"]:active:before{
+                border: 18px solid rgba(213,213,213,1);
+                background: rgba(164,164,164,1);
+    }
+    #radio-2:checked ~ label[for="radio-2"]::before{
+        background: rgba(51,51,51,1);
+        vertical-align: middle;
+    }
+    #radio-2:checked ~ label[for="radio-2"]:hover:before{
+                border: 18px solid rgba(229,229,229,1);
+                background: rgba(51,51,51,1);
+                transition: @transition-hover;
+    }
+    #radio-2:checked ~ label[for="radio-2"]:active:before{
+                border: 18px solid rgba(213,213,213,1);
+                background: rgba(164,164,164,1);
+    }
+}
+.info-travel{
+    border-bottom: 1px solid @color-border;
+    padding-bottom: 12px;
+    &__wrap{
+        padding: 0 6.25%;       
+    }
+    &__title{
+        text-align: center;
+        margin-top: 17px;
+    }
+    &__period-travel{
+        display: flex;
+        flex-direction: column;
+
+    }
+    input[type="text"]{
+        display: block;
+        width: 86%;
+        height: 22px;
+        padding: 18px 7.2%;
+        margin-bottom: 10px;
+        .font-title();  
+    }
+    label{
+        display: block;
+        margin-bottom: 8px;
+        margin-left: 20px;
+        margin-top: 5px;
+        .font-text();
+    }
+    label:after{
+        content:'*';
+        color: red;
+    }
+    span{
+        position: absolute;
+        right: 22px;
+        top: 22px;
+        &::after{
+            content:'дн.';
+            color:#c2c2c2;
+        }
+    }
+}
+.quantity{
+    width:280px;
+    margin:0 auto;
+    margin-bottom: 10px;
+    &__control{
+        height:58px;
+        position:relative;
+    }
+    &__button{
+        display: block;
+        position: absolute;
+        background:#f2f2f2;
+        padding: 18px 20px;
+        border: none;
+        width: 21px;
+        height: 22px;
+        vertical-align:middle;
+        text-align:center;
+        fill:rgba(184,184,184,1);
+        &:hover{
+            background:rgba(229,229,229,1);
+            fill:rgba(140,140,140,1);
+            transition:@transition-hover;
+        }
+        &:active{
+            background:rgba(213,213,213,1);
+            fill:rgba(196,196,196,1);
+        }
+        &--left{
+            left: 0;
+        }
+        &--right{
+            right:0;
+
+        }
+        svg{
+                width:21px;
+                height:21px;
+        }
+    }
+    &__input{
+        display: block;
+        position: absolute;
+        left: 67px;
+        right: 67px;
+        input[type="text"]{
+            width: 100%;
+            margin: 0;
+            padding: 0 22px;
+            box-sizing: border-box;
+            height: 58px;
+            vertical-align:middle;
+            .font-title();
+        }
+    }
+    label{
+        .font-text();
+    }
+
+}
+.number-person{
+    &__wrap{
+        padding:0 6.25%;
+    }
+    &__title{
+        margin-top: 17px;
+        margin-bottom: 23px;
+        text-align:center;
+    }
+    span{
+        position: absolute;
+        right: 22px;
+        top: 22px;
+        &::after{
+            content:'чел.';
+            color:#c2c2c2;
+        }
+    }
+    label{
+        margin-left:20px;
+        margin-bottom: 8px;
+        display:block;
+        .font-text();
+        text-align:center;
+    }
+    label::after{
+        content:'*';
+        color:red;
+    }
+}
+.data-travel{
+    border-bottom:1px solid @color-border;
+    padding-bottom: 17px;
+    &__wrap{
+        padding:0 6.25%;
+    }
+    &__item-person{
+        display:flex;
+        margin-top: 37px;
+        &:last-of-type{
+            margin-top: 21px;
+        }
+    }
+    &__number{
+        label{
+            display:block;
+            text-align: center;
+            margin-bottom:10px;
+            .font-text();
+        }
+    }
+    &__person-name{
+        margin-left: 6px;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+            label{
+                margin-left:20px;
+                display:block;
+                margin-bottom:10px;
+                .font-text();
+            }
+            label:not([for^="patronymic"])::after{
+                content:'*';
+                color:red;
+            }   
+            input[type="text"]{
+                width: 100%;
+                box-sizing: border-box;
+                height: 58px;
+                padding: 18px 9.6%;
+                margin-bottom: 10px;
+                .font-title();
+            }
+    }
+    input[id^="number-travel"]{
+        padding:18px 25px;
+        width:10px;
+        height:22px;
+        background:#f2f2f2;
+        border:none;
+        .font-title();
+    }
+}
+.attraction{
+    border-bottom:1px solid @color-border;
+    padding-bottom: 28px;
+    &__wrap{
+        text-align: center;
+        padding:0 6.25%;
+    }
+    &__title{
+        margin-top: 17px;
+        margin-bottom:20px;
+    }
+    &__list{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__item{
+        text-align:left;
+        margin-bottom: 23px;
+            &:last-of-type{
+                margin-bottom:0px;
+            }
+        input[type="checkbox"]{
+            display:none;
+        }
+        label{
+            display:inline-block;
+            text-transform:initial;
+            vertical-align: middle;
+            cursor: pointer;
+            .font-title();          
+        }
+        label::before{
+            display:inline-block;
+            content:'';
+            width: 25px;
+            height: 25px;
+            margin-right: 20px;
+            cursor: pointer;   
+            border: 15px solid #f2f2f2;   
+            background:#f2f2f2;
+            vertical-align: middle;
+            border-radius:5px;
+        }
+        label:hover:before{
+            border: 15px solid rgba(229,229,229,1);
+            background:rgba(229,229,229,1);
+            transition:@transition-hover;
+        }
+        label:active:before{
+            border: 15px solid rgba(213,213,213,1);
+            background:rgba(213,213,213,1);
+        }
+    }
+
+    #checkbox-1:checked ~ label[for="checkbox-1"]::before{
+        background:#f2f2f2 url('../img/checkbox.png') no-repeat;
+        vertical-align: middle;
+    }
+    #checkbox-1:checked ~ label[for="checkbox-1"]:hover:before{
+                border: 15px solid rgba(229,229,229,1);
+                background:rgba(229,229,229,1) url('../img/checkbox.png') no-repeat;
+                transition:@transition-hover;
+    }
+    #checkbox-1:checked ~ label[for="checkbox-1"]:active:before{
+                border: 15px solid rgba(213,213,213,1);
+                background:rgba(213,213,213,1) url('../img/checkbox-down.png') no-repeat;
+    }
+    #checkbox-2:checked ~ label[for="checkbox-2"]::before{
+                background:#f2f2f2 url('../img/checkbox.png') no-repeat;
+                vertical-align: middle;
+    }
+    #checkbox-2:checked ~ label[for="checkbox-2"]:hover:before{
+                border: 15px solid rgba(229,229,229,1);
+                background:rgba(229,229,229,1) url('../img/checkbox.png') no-repeat;
+                transition:@transition-hover;
+    }
+    #checkbox-2:checked ~ label[for="checkbox-2"]:active:before{
+                border: 15px solid rgba(213,213,213,1);
+                background:rgba(213,213,213,1) url('../img/checkbox-down.png') no-repeat;
+    }
+    #checkbox-3:checked ~ label[for="checkbox-3"]::before{
+                background:#f2f2f2 url('../img/checkbox.png') no-repeat;
+                vertical-align: middle;
+    }
+    #checkbox-3:checked ~ label[for="checkbox-3"]:hover:before{
+                border: 15px solid rgba(229,229,229,1);
+                background:rgba(229,229,229,1) url('../img/checkbox.png') no-repeat;
+                transition:@transition-hover;
+    }
+    #checkbox-3:checked ~ label[for="checkbox-3"]:active:before{
+                border: 15px solid rgba(213,213,213,1);
+                background:rgba(213,213,213,1) url('../img/checkbox-down.png') no-repeat;
+    }
+    #checkbox-4:checked ~ label[for="checkbox-4"]::before{
+        background:#f2f2f2 url('../img/checkbox.png') no-repeat;
+        vertical-align: middle;
+    }
+    #checkbox-4:checked ~ label[for="checkbox-4"]:hover:before{
+                border: 15px solid rgba(229,229,229,1);
+                background:rgba(229,229,229,1) url('../img/checkbox.png') no-repeat;
+                transition:@transition-hover;
+    }
+    #checkbox-4:checked ~ label[for="checkbox-4"]:active:before{
+                border: 15px solid rgba(213,213,213,1);
+                background:rgba(213,213,213,1) url('../img/checkbox-down.png') no-repeat;
+    }
+}
+
+.images{
+    margin-bottom:85px;
+    position: relative;
+    &__wrap{
+        padding:0 6.25%;
+    }
+    &__title{
+        text-align:center;
+        margin: 17px 0;
+    }
+    &__btn-download{
+        display:block;
+        width: 87.5%;
+        margin:0 auto;
+        margin-bottom:55px;
+        padding:16px 0;
+        text-align:center;
+        background:#f2f2f2;
+        color:#c4c4c4;
+        font-size:21px;
+        line-height:26px;
+        &:hover{
+            background:rgba(229,229,229,1);
+            color:rgba(140,140,140,1);
+            transition:@transition-hover;
+        }
+        &:active{
+            background:rgba(213,213,213,1);
+            color:rgba(175,175,175,1);
+        }
+    }
+    &__drag-photos{
+        position: absolute;
+        width: 87.5%;
+        display: none;
+        margin: 0 auto;
+        margin-bottom: 55px;
+        padding: 16px 0;
+        background: @blue-color;
+        top:45px;
+        color: @white-color;
+        font-size: 21px;
+        line-height: 26px;
+        text-align: center;
+        &:hover{
+            background:rgba(102,158,192,1);
+            transition:@transition-hover;
+        }
+    }
+    &__submit{
+        display:block;
+        width: 87.5%;
+        padding:16px 0;
+        margin-top:10px;
+        background:@blue-color;
+        text-align:center;
+        margin:0 auto;
+        color: @white-color;
+        font-size:21px;
+        line-height:26px;
+        .btn();
+    }
+}
+.images-block{
+    width: 280px;
+    margin: 0 auto;
+    &::before,
+        &::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+    &__item{
+        display: block;
+        float: left;
+        width: 70px;
+        margin-right: 35px;
+        margin-bottom: 35px;
+        img{
+            width: 70px;
+            height: 70px;
+        }
+        &:nth-of-type(3n){
+            margin-right:0;
+        }
+    }
+
+    &__close-link{
+        display:block;
+        position:relative;
+        &:before{
+            content:'';
+            position:absolute;
+            border:15px solid #f2f2f2;
+            border-radius:50%;
+            left:50%;
+            top:-15px;
+            margin-left:-15px;
+        }
+        &--icon{
+            position:absolute;
+            width:12px;
+            height:12px;
+            left:50%;
+            top: -6px;
+            margin-left: -6px;
+            fill: rgba(184,184,184,1);
+        }
+        &:hover:before{
+            border: 15px solid rgba(229,229,229,1);
+            transition:@transition-hover;
+        }
+        &:active:before{
+            border: 15px solid rgba(213,213,213,1);  
+            transition:@transition-hover;
+        }
+        &:hover .images-block__close-link--icon{
+            fill: rgba(140,140,140,1);
+            transition:@transition-hover;
+        }
+        &:active .images-block__close-link--icon{
+            fill: rgba(196,196,196,1);
+            transition:@transition-hover;
+        }
+    }
+
+    p{
+        display:none;
+    }
+}
+
+    
+    
+    
+    

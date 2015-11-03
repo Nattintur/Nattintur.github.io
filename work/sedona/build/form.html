@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+    <div class="container"> 
+ 	<!--Шапка, навигация-->
+    	<header class="page-header">
+		<div class="page-header__wrap">
+			<nav class="navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item"><a class="navigation__link" href="#">Карта штата</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="index.html">Информация</a></li>
+					<li class="navigation__item"></li>
+					<li class="navigation__item"><a class="navigation__link" href="#">Фото и видео</a></li>
+					<li class="navigation__item"><a class="navigation__link navigation__link--active" href="#">Гостиницы</a></li>
+				</ul>
+				<a class="menu-close" href="/">
+					<svg class="menu-close__img" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" 
+						viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+						<polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+					</svg>
+				</a>
+			</nav>
+            
+			<!--Логотип-->
+			<div class="logo">
+				<a class="logo__link" href="index.html">
+		        	<svg class="logo__background" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+		        		xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="137px" height="70.778px" 
+		        		viewBox="0 0 137 70.778" enable-background="new 0 0 137 70.778" xml:space="preserve"><path d="M137,0h-14.173H14.173H0l31.279,35.161l0,0l27.8,31.249c5.182,5.824,13.66,5.824,18.842,0l27.8-31.249l0,0L137,0z"/>
+					</svg>
+					<img class="logo__img" src="img/logo-sedona@1x.png" alt="logo" width="68" height="55">
+		    	</a>
+		    	<a class="menu-open" href="/">
+		    		<svg class="menu-open__img" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+		    			xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" 
+		    			viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
+						<g>
+							<rect width="22.928" height="3.964"/>
+							<rect y="9.009" width="22.928" height="3.964"/>
+							<rect y="18.018" width="22.928" height="3.964"/>
+						</g>
+					</svg>
+		    	</a>
+			</div>
+		</div>
+		</header>
+
+		<!--Основной контент-->
+		<main>
+			<div class="main__wrap">
+				<div class="card">
+			  		<div class="card__wrap">
+			    		<svg class="card__main-logo-form" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="459.755px" height="79.804px" 
+						viewBox="0 0 459.755 79.804" enable-background="new 0 0 459.755 79.804" xml:space="preserve">
+						<g>
+						<path d="M44.468,21.737c-3.573-2.978-8.139-4.963-12.903-4.963c-3.573,0-8.338,2.084-8.338,6.253c0,4.368,5.261,6.055,8.636,7.146l4.963,1.489c10.422,3.077,18.462,8.337,18.462,20.447c0,7.445-1.787,15.088-7.742,20.15c-5.856,4.963-13.698,7.047-21.241,7.047c-9.43,0-18.661-3.176-26.304-8.537l8.338-15.682c4.864,4.268,10.621,7.742,17.271,7.742c4.566,0,9.43-2.283,9.43-7.544c0-5.46-7.643-7.345-11.812-8.536c-12.208-3.475-20.249-6.65-20.249-21.143c0-15.187,10.819-25.112,25.807-25.112c7.543,0,16.775,2.382,23.425,6.154L44.468,21.737z"/>
+						<path d="M91.833,18.958v12.506h21.936v16.478H91.833v12.902h23.127v16.478H72.378V2.481h42.582v16.477H91.833z"/>
+						<path d="M129.418,2.481h27.594c20.844,0,38.016,16.377,38.016,37.42c0,21.042-17.271,37.42-38.016,37.42h-27.594V2.481zM148.873,60.845h4.367c11.613,0,21.54-6.352,21.54-20.943c0-13.4-8.834-20.943-21.341-20.943h-4.566V60.845z"/>
+						<path d="M286.873,38.512c0,24.219-17.37,41.292-41.391,41.292s-41.391-17.072-41.391-41.292C204.091,15.881,223.943,0,245.482,0S286.873,15.881,286.873,38.512z M224.34,38.611c0,12.903,9.529,22.333,21.142,22.333s21.142-9.43,21.142-22.333c0-10.323-9.528-19.752-21.142-19.752S224.34,28.289,224.34,38.611z"/>
+						<path d="M297.239,2.481h19.455l35.634,45.758h0.198V2.481h19.454v74.841h-19.454l-35.634-45.857h-0.198v45.857h-19.455V2.481z"/>
+						<path d="M407.347,64.319l-5.161,13.003h-20.646l28.785-74.841h21.241l28.189,74.841H439.01l-4.863-13.003H407.347z M420.945,25.608h-0.199l-8.039,23.822h16.179L420.945,25.608z"/>
+						</g>
+					</svg>
+			  		</div>
+			  		<svg class="card__svg-triangle" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+			  			xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1202px" height="57px" 
+			  			viewBox="0 0 1202 57" enable-background="new 0 0 1202 57" xml:space="preserve">
+						<g>
+							<polygon fill="#FFFFFF" points="250,23.71 0,0 0,57 250,57 601,57 250,0 	"/>
+							<polygon fill="#FFFFFF" points="952,23.71 952,0 601,57 952,57 1202,57 1202,0"/>
+						</g>
+					</svg>
+				</div>
+			
+				<!--Заголовок главной страницы формы-->
+				<div class="main-page-header">
+					<div class="main-page-header__wrap">
+						<h1 class="main-page-header__title">Оставьте свой отзыв</h1>
+						<p class="main-page-header__descr">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+					</div>
+				</div>
+		  
+				<!--Форма отзыва-->
+				<div class="form-review">
+					<div class="form-review__wrap">
+						<div class="form-review__title">
+							<h2>Представьтесь, пожалуйста:</h2>
+						</div>
+						<form action="/echo" method="post" enctype="multipart/form-data">
+							<!--ФИО путешественника-->
+							<div class="person-data">
+	                            <div class="person-data__wrap">
+	                            	<div class="person-data__name">
+	                            		<label for="last-name">Фамилия:</label>
+								     	<input type="text" id="last-name" name="last-name" value="Иванов">
+	                            	</div>
+								    <div class="person-data__name">
+								    	<label for="first-name">Имя:</label>
+								     	<input type="text" id="first-name" name="first-name" value="Пётр">
+								    </div>
+								    <div class="person-data__name">
+								    	<label for="patronymic">Отчество:</label>
+								     	<input type="text" id="patronymic" name="patronymic" value="Александрович">
+								    </div>    
+	                            </div>
+							</div>
+							<!--Впечатление-->
+							<div class="impression">
+	                            <div class="impression__wrap">
+	                            <div class="impression__title">
+										<h2 >Ваше общее впечатление:</h2>
+								</div>
+								     <ul class="impression__list">
+									    <li class="impression__item">
+	                                        <input type="radio" id="radio-1" name="toggle" checked>
+	                                        <label for="radio-1">Скорее положительное</label>
+	                                    </li>
+									    <li class="impression__item">
+	                                        <input type="radio" id="radio-2" name="toggle">
+	                                        <label for="radio-2">Скорее отрицательное</label>
+	                                    </li>
+								     </ul>
+	                            </div>
+							</div>
+							<!--Информация о путешествии-->
+							<div class="info-travel">
+	                            <div class="info-travel__wrap">
+	                            	<div class="info-travel__title">
+										<h2>Даты вашей поездки:</h2>
+	                            	</div>
+	                            	<div class="info-travel__period-travel">
+									    <div class="info-travel__item">
+									    	<label for="date-start">Дата приезда:</label>
+									     	<input type="text" id="date-start" name="date-start" value="4 июля 2015">
+									    </div> 
+									    <div class="quantity">
+										    <label for="quantity-day">Дней пребывания:</label>
+										    <div class="quantity__control">
+											    <a class="quantity__button quantity__button--left" href="#">
+											    	<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+											    		xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														width="9.917px" height="1.917px" viewBox="0 0 9.917 1.917" 
+														enable-background="new 0 0 9.917 1.917" xml:space="preserve">
+														<rect width="9.917" height="1.917"/>
+													</svg>
+											    </a>
+											    <div class="quantity__input">
+											    	<input type="text" id="quantity-day" value="14"><span></span>
+											    </div>
+											    <a class="quantity__button quantity__button--right" href="#">
+												    <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+												    	xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 												width="9.917px" height="9.917px" viewBox="0 0 9.917 9.917" 
+		 												enable-background="new 0 0 9.917 9.917" xml:space="preserve">
+														<polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917 "/>
+													</svg>
+											    </a>
+											</div>
+									    </div>
+									    <div class="info-travel__item">
+									    	<label for="date-end">Дата отъезда:</label>
+		                                 	<input type="text" id="date-end" name="date-end" value="28 июля 2015" autofocus>
+									    </div>
+									</div>
+	                            </div>
+							</div>
+							<!--Кол-во путешественников-->
+							<div class="number-person">
+	                            <div class="number-person__wrap">
+	                            	<div class="number-person__title">
+								     	<h2>Кол-во путешественников:</h2>
+								    </div>
+								    <div class="quantity">
+									    <label for="number-person">Кол-во путешественников:</label>
+									    <div class="quantity__control">
+										    <a class="quantity__button quantity__button--left" href="#">
+										    	<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+											    		xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														width="9.917px" height="1.917px" viewBox="0 0 9.917 1.917" 
+														enable-background="new 0 0 9.917 1.917" xml:space="preserve">
+														<rect width="9.917" height="1.917"/>
+												</svg>
+										    </a>
+										    <div class="quantity__input">
+										    	<input type="text" id="number-person" value="2"><span></span>
+										    </div>
+										    <a class="quantity__button quantity__button--right" href="#">
+										    	<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+												    	xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 												width="9.917px" height="9.917px" viewBox="0 0 9.917 9.917" 
+		 												enable-background="new 0 0 9.917 9.917" xml:space="preserve">
+														<polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917 "/>
+												</svg>
+										    </a>
+										</div>
+								    </div>
+	                            </div>
+							</div>
+							<!--Информация о всех путешествующих-->
+							<div class="data-travel">
+	                            <div class="data-travel__wrap">
+								     <div class="data-travel__item-person">
+									    <div class="data-travel__number">
+	                                        <label for="number-travel1">№</label>
+	                                        <input id="number-travel1" value="1" readonly>
+									    </div>
+									    <div class="data-travel__person-name">
+									    	<div class="data-travel__last-name">
+										   		<label for="last-name__person1">Фамилия:</label>
+										   		<input type="text" id="last-name__person1" name="last-name" value="Иванов">
+											</div>
+											<div class="data-travel__first-name">
+										   		<label for="first-name__person1">Имя:</label>
+										   		<input type="text" id="first-name__person1" name="first-name" value="Пётр">
+											</div>
+											<div class="data-travel__patronymic">
+										   		<label for="patronymic__person1">Отчество:</label>
+										   		<input type="text" id="patronymic__person1" name="patronymic" value="Александрович">
+									    	</div>
+									    </div>
+								     </div>
+								     <div class="data-travel__item-person">
+									    <div class="data-travel__number">
+										   <label for="number-travel2">№</label>
+										   <input id="number-travel2" value="2" readonly>
+									    </div>
+									    <div class="data-travel__person-name">
+									    	<div class="data-travel__last-name">
+										   		<label for="last-name__person2">Фамилия:</label>
+										   		<input type="text" id="last-name__person2" name="last-name" value="Иванов">
+											</div>
+											<div class="data-travel__first-name">
+										   		<label for="first-name__person2">Имя:</label>
+										   		<input type="text" id="first-name__person2" name="first-name" value="Пётр">
+											</div>
+											<div class="data-travel__patronymic">
+										   		<label for="patronymic__person2">Отчество:</label>
+										   		<input type="text" id="patronymic__person2" name="patronymic" value="Александрович">
+									    	</div>
+									    </div>
+								     </div>
+	                            </div>
+							</div>
+							<!--Достопримечательности-->
+							<div class="attraction">
+	                            <div class="attraction__wrap">
+	                            	<div class="attraction__title">
+	                                	<h2>Посещенные достопримечательности:</h2>
+	                            	</div>
+								     <ul class="attraction__list">
+									    <li class="attraction__item">
+	                                        <input type="checkbox" id="checkbox-1" checked>
+	                                        <label for="checkbox-1">Мост Дьявола</label>
+	                                    </li>
+									    <li class="attraction__item">
+	                                        <input type="checkbox" id="checkbox-2">
+	                                        <label for="checkbox-2">Слайд-парк</label>
+	                                    </li>
+									    <li class="attraction__item">
+	                                        <input type="checkbox" id="checkbox-3" checked>
+	                                        <label for="checkbox-3">Гора-Колокол</label>    
+	                                    </li>
+									    <li class="attraction__item">
+	                                        <input type="checkbox" id="checkbox-4" checked>
+	                                        <label for="checkbox-4">Красные скалы</label>
+	                                    </li>
+								     </ul>
+	                            </div>
+							</div>
+					
+							<!--Загрузка фото-->
+							<div class="images">
+	                            <div class="images__wrap">
+	                            	<div  class="images__title"> 
+	                                 <h2>Загрузите фотографии:</h2>
+	                                </div>
+	                                <a class="images__btn-download">Выбрать фотографии</a>
+	                                <div class="images__drag-photos">Перетащите фотографии сюда</div>
+
+	                                <div class="images-block">
+	                                <div class="images-block__item">
+	                                	<a class="images-block__close-link" href="#">
+	                                		<svg class="images-block__close-link--icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+												 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve"><polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+											</svg>
+	                                	</a>
+	                                	<img src="img/image1@1x.jpg" alt="IMG-689.JPG" width="70" height="70">
+	                                	<p>IMG-689.JPG</p>
+	                                </div>
+
+	                                <div class="images-block__item">
+	                                	<a class="images-block__close-link" href="#">
+	                                		<svg class="images-block__close-link--icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+												 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve"><polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+											</svg>
+	                                	</a>
+	                                	<img src="img/image2@1x.jpg" alt="IMG-687.JPG" width="70" height="70">
+	                                	<p>IMG-687.JPG</p>
+	                                </div>
+	                                <div class="images-block__item">
+	                                	<a class="images-block__close-link" href="#">
+	                                		<svg class="images-block__close-link--icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+												 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve"><polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+											</svg>
+	                                	</a>
+	                                	<img src="img/image3@1x.jpg" alt="IMG-688.JPG" width="70" height="70">
+	                                	<p>IMG-688.JPG</p>
+	                                </div>
+	                                <div class="images-block__item">
+	                                	<a class="images-block__close-link" href="#">
+	                                		<svg class="images-block__close-link--icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+												 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve"><polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+											</svg>
+	                                	</a>
+	                                	<img src="img/image4@1x.jpg" alt="IMG-689.JPG" width="70" height="70">
+	                                	<p>IMG-689.JPG</p>
+	                                </div>
+	                                <div class="images-block__item">
+	                                	<a class="images-block__close-link" href="#">
+	                                		<svg class="images-block__close-link--icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+												 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve"><polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+											</svg>
+	                                	</a>
+	                                	<img src="img/image5@1x.jpg" alt="IMG-660.JPG" width="70" height="70">
+	                                	<p>IMG-660.JPG</p>
+	                                </div>
+	                                <div class="images-block__item">
+	                                	<a class="images-block__close-link" href="#">
+	                                		<svg class="images-block__close-link--icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+												 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve"><polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+											</svg>
+	                                	</a>
+	                                	<img src="img/image6@1x.jpg" alt="IMG-691.JPG" width="70" height="70">
+	                                	<p>IMG-691.JPG</p>
+	                                </div>
+	                            </div>
+	                                <a class="images__submit" href="#">Отправить отзыв</a>
+	                            </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	<!--Футер-->
+    <!--Футер-->
+		<footer class="page-footer">
+			<div class="page-footer__wrap">
+				<div class="page-footer__item">
+					<a class="page-footer__link-hashtag" href="#">#Visitsedona</a>
+				</div>
+				<div class="social-links">
+					<a class="social-links__item social-links__item--tw" href="http://tw.com">
+						<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+							x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" 
+							enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+							<g id="W6EeEF_1_">
+								<g>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
+									c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
+								</g>
+							</g>
+						</svg>
+					</a>
+					<a class="social-links__item social-links__item--fb" href="http://fb.com">
+						<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+							x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" 
+							enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+							<path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787C5.765,5.069,5.75,3.709,6.275,3.356z"/>
+						</svg>
+					</a>
+					<a class="social-links__item social-links__item--youtube" href="http://youtube.ru">
+						<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+							x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" 
+							enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+							<path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
+						</svg>
+					</a>
+				</div>
+				<div class="page-footer__item page-footer__item--right">
+					<span class="page-footer__dev">Разработано</span>
+					<a class="page-footer__link-copyright" href="http://htmlacademy.ru">
+						<svg class="page-footer__svg-copyright" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+							x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" 
+							enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+							<path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65
+							l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</footer>
+	<!--Модальные окна-->
+	</div>
+	<div class="error">
+		<div class="error__wrap">
+			<h1 class="error__title">Что-то пошло не так!</h1>
+			<p class="error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+			<a class="error__btn" href="#">Ок</a>
+		</div>
+	</div>
+	<div class="success">
+		<div class="success__wrap">
+			<h1 class="success__title">Ваш отзыв отправлен!</h1>
+			<p class="success__text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+		</div>
+		<div class="success__btn"><a href="#">Закрыть окно</a></div>
+	</div>
+  </body>
+  <script src="js/script-menu.js"></script>
+  <script src="js/script.js"></script>
+</html>

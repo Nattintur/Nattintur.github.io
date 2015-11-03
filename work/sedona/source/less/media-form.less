@@ -1,0 +1,382 @@
+@media (min-width:@width-tablet-content){
+	.card{
+	    &__main-logo-form{
+	        height: 80px;
+		    margin-top: 51px;
+		    width: 459px;
+		    margin-bottom: 52px;
+	    }
+	}
+	
+	.main-page-header{
+		border:none;
+		padding:0 7.7%;
+		&__wrap{
+			padding: 33px 0 55px;
+			width:68%;
+			margin:0 auto;
+		}
+		&__title{
+			margin-top: 40px;
+			font-size:30px;
+			line-height:26px;
+		}
+		&__descr{
+			margin-top: 30px;
+			margin-bottom:0;
+			line-height:26px;
+		}
+	}
+	.form-review{
+		&__wrap{
+			padding:0 7.7%;
+		}
+		&__title{
+			.line-text();
+			margin-top:0;
+			margin-bottom: 25px;
+		}
+	}
+	.person-data{
+		border:none;
+		padding-bottom: 65px;
+		&__wrap{
+		    padding: 0;
+		    margin-bottom: 0;
+		    flex-direction: row;
+		    justify-content: space-between;
+		}
+		&__name{
+			width: 27.1%;
+		}
+		input[type="text"]{
+			width: 77.2%;
+			margin: 10px 0 0;
+    		padding: 17px 11.4%;
+		}
+	}
+	.impression{
+		border:none;
+		&__wrap{
+			padding:0;
+		}
+		&__title{
+			margin:0;
+			.line-text();
+		}
+		&__list{
+			flex-direction: row;
+    		margin-top: 40px;
+    		margin-bottom: 51px;
+    		justify-content: space-between;
+    		align-items: stretch;
+		}
+		&__item{
+			width:41%;
+			margin:0;
+		}
+	}
+	.info-travel{
+		padding-bottom: 61px;
+		border:none;
+		&__wrap{
+			padding:0px;
+		}
+		&__title{
+			margin:0;
+			.line-text();
+		}
+		&__period-travel{
+			flex-direction:row;
+			margin:0;
+			width:100%;
+			justify-content:space-between;
+		}
+		&__item{
+			width:27.1%;
+			label{
+				margin-bottom: 10px;
+    			margin-left: 22px;
+    			margin-top: 25px;
+			}
+			input[type="text"]{
+				width: 77.2%;
+    			padding: 17px 11.4%;
+    			height: 22px;
+    			margin: 0;
+			}
+		}
+
+	}
+	.quantity{
+		width:27.1%;
+		margin: 0 auto;
+		label{
+			margin-bottom: 10px;
+			margin-left: 22px;
+			margin-top: 25px;
+		}
+		&__input{
+	        left: 61px;
+	        right: 61px;
+			input[type="text"]{
+			    padding: 0;
+	    		text-align: center;
+			}
+		}
+		span{
+			display:none;
+		}
+	}
+	.number-person{
+	    margin-bottom: 25px;
+		&__wrap{
+			padding:0px;
+		}
+		&__title{
+			margin:0;
+			.line-text();
+		}
+		.quantity{
+			width: 31.1%;
+			label{
+				margin-left:0;
+				margin-top: 25px;
+    			margin-bottom: 10px;
+    			text-align:center;
+    			
+			}
+			&__control{
+				width: 175px;
+				margin: 0 auto;
+			}
+		}
+	}
+	.data-travel{
+		padding-bottom: 38px;
+		border:none;
+		&__wrap{
+			padding:0;
+		}
+		&__item-person{
+			margin-top: 0;
+			margin-bottom: 25px;
+			justify-content:flex-start;
+			&:last-of-type{
+            	margin-top: 0;
+        	}
+		}
+		&__person-name{
+			width:93%;
+			flex-direction: row;
+			input[type="text"]{
+				margin-bottom: 20px;
+			}
+		}
+		&__last-name,
+		&__first-name,
+		&__patronymic{
+			width:31.5%;
+		}
+	}
+	.attraction{
+		border:none;
+		&__wrap{
+			padding:0;
+		}
+		&__title{
+			margin:0;
+			.line-text();
+			&:after{
+				top: -23px;
+			}
+		}
+		&__list{
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			margin-top:45px;
+		}
+		&__item{
+			width:35.2%;
+			margin-bottom: 30px;
+			}
+		&__item:nth-of-type(1){
+				order:1;
+			}
+		&__item:nth-of-type(2){
+				order:3;
+			}
+		&__item:nth-of-type(3){
+				order:2;
+			}
+		&__item:nth-of-type(4){
+				order:4;
+			}
+		}
+	.images{
+		margin-bottom: 124px;
+		&__wrap{
+			padding:0;
+			position:relative;
+		}
+		&__title{
+			margin:0;
+			.line-text();
+			margin-bottom:60px;
+		}
+		&__btn-download{
+    		margin-bottom: 82px;
+    		width: 458px;
+		}
+		&__drag-photos{
+		    margin-bottom: 88px;
+		    top: 85px;
+		    width:100%;
+		}
+		&__submit{
+			width:458px;
+		}
+
+	}
+	.images-block{
+		width: 640px;
+		&__item{
+			width: 140px;
+			margin-right: 32px;
+			margin-left: 32px;
+			margin-bottom: 35px;
+			img{
+				width: 140px;
+				height: 140px;
+			}
+			p{
+				display: block;
+				margin-top: 10px;
+			}
+		}
+		&__close-link{
+			&:before{
+				border: 30px solid #f2f2f2;
+				top: -30px;
+				margin-left: -30px;
+				left: 100%;
+			}
+			&--icon{
+				width: 24px;
+				height: 24px;
+				left: 100%;
+				margin-left: -12px;
+				top: -12px;
+			}
+			&:nth-of-type(3n){
+	        	margin-right: 0;
+	    	}
+	    	&:hover:before{
+            	border: 30px solid rgba(229,229,229,1);
+        	}
+        	&:active:before{
+            	border: 30px solid rgba(213,213,213,1);  
+        	}
+		}
+	}
+}
+
+@media (min-width:@width-desktop-content){
+	.container{
+		min-width:@width-desktop-content;
+	}
+
+	.card{
+		&__main-logo-form{
+			margin-bottom: 62px;
+		}
+	}
+
+	.main-page-header{
+		&__wrap{
+			padding:71px 0 55px 0;
+		}
+	}
+
+    .form-review{
+    	&__wrap{
+    		padding: 0 10%;
+    	}
+    }
+    .person-data{
+    	&__name{
+    		width:29%;
+    	}
+    }
+    .impression{
+    	&__list{
+    		justify-content: flex-end;
+    	}
+    }
+    .info-travel{
+    	&__item{
+    		width:29.1%;
+    	}
+    	quantity{
+    		span{
+    			display:block;
+    		}	
+    	}
+    }
+    .quantity{
+    	width:29.1%;
+    	&__input{
+    		margin:0 6px;
+    	}
+    	span{
+    			display:block;
+    	}
+    	&__input{
+        input[type="text"]{
+            padding: 0 22px;
+            text-align: initial;
+        }
+    }
+    }
+    .number-person{
+    	.quantity{
+    		margin-left:0;
+    		span{
+    			display:block;
+    		}
+    	&__control{
+    		width: auto;
+    		}
+    	}
+    }
+    .data-travel{
+    	padding-bottom: 35px;
+    }
+    .attraction{
+    		padding-bottom:60px;
+    	&__list{
+    		justify-content: space-between;
+    	}
+    	&__item{
+    		width: 21%;
+    		margin-bottom: 10px;
+    	}
+    }
+    .images{
+    	margin-bottom:85px;
+    }
+    .images-block{
+    	width: 988px;
+    	&__item{
+			margin-right: 65px;
+			margin-left: 0;
+			&:nth-of-type(3n){
+            	margin-right: 65px;
+        	}
+	    	&:nth-of-type(5n){
+				margin-right: 0;
+			}
+		}
+    }
+}
