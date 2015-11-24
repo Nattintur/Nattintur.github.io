@@ -39,6 +39,15 @@
 		event.preventDefault();
 
 		decrement(number_person_input);
+
+		var elements = document.querySelectorAll(".data-travel__wrap .data-travel__item-person");
+		//var countElements = parseInt(elements.length) + 1;
+
+		var countElements = parseInt(number_person_input.value) + 1;
+		if(parseInt(elements.length)>0){
+			removeChild(countElements);
+		}
+
 	}, false);
 
 
@@ -47,13 +56,24 @@
 		event.preventDefault();
 
 		increment(number_person_input, _max_person_value);
-	}, false);
+
+        //var countElements = parseInt(elements.length) + 1;
+        var countElements = parseInt(number_person_input.value);
+        var elements = document.querySelectorAll(".data-travel__wrap .data-travel__item-person");
+
+        if(parseInt(elements.length) < _max_person_value){
+        	addChild(countElements);  
+        }
+        
+      }, false);
+
 
 	//Событие input срабатывает сразу при изменении значения текстового элемента
 	//IE8+
 	number_person_input.addEventListener('input',function(event){
 		
 		filter(number_person_input, _max_person_value);
+
 	}, false);
 
 	function decrement(input){
@@ -103,4 +123,123 @@
 			}
 		}
 	}
-})();
+
+
+    // Добавление элемнта в DOM-дерево
+    function addChild(number){
+        
+        /* Создаем родительский элемент <div class="data-travel__last-name"> */
+        var parentLastName = document.createElement("div");
+        parentLastName.className = "data-travel__last-name";
+
+	        // Создаем дочерний элемент label для фамилии
+	        var newElemLastNameLabel = document.createElement("label");
+	        newElemLastNameLabel.htmlFor = "last-name__person" + number;
+	        newElemLastNameLabel.innerText = "Фамилия:";
+
+	        // Создаем дочерний элемент input для фамилии
+	        var newElemLastNameInput = document.createElement("input");
+	        newElemLastNameInput.type = "text";
+	        newElemLastNameInput.name = "last-name";
+	        newElemLastNameInput.id = "last-name__person" + number;
+	        newElemLastNameInput.value = "Иванов";
+
+	        // Добавляем дочерние элементы label и input в родительский div
+	        parentLastName.appendChild(newElemLastNameLabel);
+	        parentLastName.appendChild(newElemLastNameInput);
+
+        /* Создаем родительский элемент <div class="data-travel__first-name"> */
+        var parentFirstName = document.createElement("div");
+        parentFirstName.className = "data-travel__first-name";
+
+	        // Создаем дочерний элемент label для имени
+	        var newElemFirstNameLabel = document.createElement("label");
+	        newElemFirstNameLabel.htmlFor = "first-name__person" + number;
+	        newElemFirstNameLabel.innerText = "Имя:";
+
+	        // Создаем дочерний элемент input для имени
+	        var newElemFirstNameInput = document.createElement("input");
+	        newElemFirstNameInput.type = "text";
+	        newElemFirstNameInput.name = "first-name";
+	        newElemFirstNameInput.id = "first-name__person" + number;
+	        newElemFirstNameInput.value = "Пётр";
+
+	        // Добавляем дочерние элементы label и input в родительский div
+	        parentFirstName.appendChild(newElemFirstNameLabel);
+	        parentFirstName.appendChild(newElemFirstNameInput);
+
+
+	      /* Создаем родительский элемент <div class="data-travel__patronymic">*/
+	      var parentPatronymic = document.createElement("div");
+	      parentPatronymic.className = "data-travel__patronymic";
+
+	      	// Создаем дочерний элемент label для отчества
+	      	var newElemPatronymicLabel = document.createElement("label");
+	      	newElemPatronymicLabel.htmlFor = "patronymic__person" + number;
+	        newElemPatronymicLabel.innerText = "Отчество:";
+
+	        // Создаем дочерний элемент input для имени
+	        var newElemPatronymicInput = document.createElement("input");
+	        newElemPatronymicInput.type = "text";
+	        newElemPatronymicInput.name = "patronymic";
+	        newElemPatronymicInput.id = "patronymic__person" + number;
+	        newElemPatronymicInput.value = "Александрович";
+
+	        // Добавляем дочерние элементы label и input в родительский div
+	        parentPatronymic.appendChild(newElemPatronymicLabel);
+	        parentPatronymic.appendChild(newElemPatronymicInput);
+
+	      /* Создаем родительский элемент <div class="data-travel__person-name">*/
+	      var parentPersonName = document.createElement("div");
+	      parentPersonName.className = "data-travel__person-name"
+
+	      	// Добавляем в div.data-travel__person-name дочерние элементы
+	      	// div.data-travel__last-name, div.data-travel__first-name, div.data-travel__patronymic
+	      	parentPersonName.appendChild(parentLastName);
+	      	parentPersonName.appendChild(parentFirstName);
+	      	parentPersonName.appendChild(parentPatronymic);
+
+	      /* Создаем родительский элемент <div class="data-travel__number">*/
+	      var parentNumber = document.createElement("div");
+	      parentNumber.className = "data-travel__number";
+
+	      	// Создаем дочерний элемент label для номера
+	      	var newElemNumberLabel = document.createElement("label");
+	      	newElemNumberLabel.htmlFor = "number-travel" + number;
+	        newElemNumberLabel.innerText = "№";
+
+	        // Создаем дочерний элемент div для номера
+	        var newElemNumberDiv = document.createElement("input");
+	        newElemNumberDiv.id = "number-travel" + number;
+	        newElemNumberDiv.value = number;
+			newElemNumberDiv.readonly = true;
+
+	        // Добавляем в div.data-travel__number дочерние элементы label и div
+	        parentNumber.appendChild(newElemNumberLabel);
+	        parentNumber.appendChild(newElemNumberDiv);
+
+
+        // Добавляем в div.data-travel__item-person дочерние элементы
+        // div.data-travel__number, div.data-travel__person-name
+
+        var parentItemPerson = document.createElement("div");
+        parentItemPerson.className = "data-travel__item-person";
+        parentItemPerson.appendChild(parentNumber);
+        parentItemPerson.appendChild(parentPersonName);
+
+
+        // Добавяляем в div.data-travel__wrap дочерний элемент div.data-travel__item-person
+
+        // Поиск главного родительского элемента для нашего создаваемого блока
+        var parentWrap = document.querySelector(".data-travel .data-travel__wrap");
+
+        parentWrap.appendChild(parentItemPerson);
+ 
+      }
+
+      function removeChild(number){
+      	var ElemItenPerson = document.querySelector(".data-travel__wrap .data-travel__item-person:nth-of-type(" + number + ")")
+      	ElemItenPerson.remove();
+      }
+
+    })();
